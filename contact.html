@@ -181,43 +181,43 @@ Reach out to the Techenclave team for support, feedback, or collaboration inquir
                 </div>
 
                 <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
-                        <div class="row g-3">
-                            <div class="row g-4">
-    <div class="col-md-6" data-aos="fade-up">
-        <div class="form-floating">
-            <input type="text" class="form-control shadow-sm" id="name" required placeholder="Your Name">
-            <label for="name">Your Name</label>
-        </div>
-    </div>
-    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="form-floating">
-            <input type="email" class="form-control shadow-sm" id="email" required placeholder="Your Email">
-            <label for="email">Your Email</label>
-        </div>
-    </div>
-    <div class="col-12" data-aos="fade-up" data-aos-delay="200">
-        <div class="form-floating">
-            <input type="text" class="form-control shadow-sm" id="subject" required placeholder="Subject">
-            <label for="subject">Subject</label>
-        </div>
-    </div>
-    <div class="col-12" data-aos="fade-up" data-aos-delay="300">
-        <div class="form-floating">
-            <textarea class="form-control shadow-sm" required placeholder="Leave a message here" id="message"
-                style="height: 150px"></textarea>
-            <label for="message">Message</label>
-        </div>
-    </div>
-    <div class="col-12 text-center" data-aos="zoom-in">
-             <button type="submit" class="btn px-5 py-2 shadow" style="background-color: #3b88df; color: white; border: none;">
-  Send Message
-</button>
+                   <form action="https://formspree.io/f/your-form-id" method="POST">
+    <div class="row g-3">
+        <div class="row g-4">
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="form-floating">
+                    <input type="text" class="form-control shadow-sm" id="name" name="name" required placeholder="Your Name">
+                    <label for="name">Your Name</label>
+                </div>
             </div>
-</div>
-                            
-                        </div>
-                    </form>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="form-floating">
+                    <input type="email" class="form-control shadow-sm" id="email" name="email" required placeholder="Your Email">
+                    <label for="email">Your Email</label>
+                </div>
+            </div>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="form-floating">
+                    <input type="text" class="form-control shadow-sm" id="subject" name="subject" required placeholder="Subject">
+                    <label for="subject">Subject</label>
+                </div>
+            </div>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+                <div class="form-floating">
+                    <textarea class="form-control shadow-sm" name="message" required placeholder="Leave a message here" id="message"
+                        style="height: 150px"></textarea>
+                    <label for="message">Message</label>
+                </div>
+            </div>
+            <div class="col-12 text-center" data-aos="zoom-in">
+                <button type="submit" class="btn px-5 py-2 shadow" style="background-color: #3b88df; color: white; border: none;">
+                    Send Message
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+
                 </div>
             </div>
         </div>
