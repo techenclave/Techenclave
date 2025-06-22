@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Secret Coder : Login</title>
+    <title>Techenclave : Login</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -32,6 +32,34 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
+<style>
+.nav-link.active {
+    color: #00bfff !important; /* sky blue, or use your preferred color */
+    font-weight: bold;
+    border-bottom: 2px solid #00bfff; /* optional underline */
+  }
+
+
+
+/* Back to Top Button Color */
+.back-to-top {
+  background-color: #0d6efd; /* original blue */
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+/* On hover */
+.back-to-top:hover {
+  background-color: #5eaee0; /* lighter blue */
+}
+
+/* On click (active) or focus */
+.back-to-top:active,
+.back-to-top:focus {
+  background-color: #87CEEB !important; /* sky blue */
+}
+</style>
+
 
 </head>
 
@@ -49,7 +77,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <p class="m-0 fw-bold" style="font-size: 25px;"><img src="img/icon.png" alt="" height="50px">Secret<span style="color: #fb873f;">Coder</span></p> 
+            <p class="m-0 fw-bold" style="font-size: 25px;"><img src="img/icon.png" alt="" height="50px">Techenclave<span style="color: #fb873f;"></span></p> 
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             style="border: none;">
@@ -57,18 +85,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="index.html" class="nav-item nav-link ">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
                 <a href="courses.html" class="nav-item nav-link">Courses</a>
-                <div class="nav-item dropdown">
+		<a href="verification.html" class="nav-item nav-link">Verification</a>
+                <!-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu fade-down m-0">
                         <a href="team.html" class="dropdown-item">Our Team</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+
                     </div>
-                </div>
+                </div> -->
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
-                <a href="login.html" class="nav-item nav-link"><i class="fa fa-user"></i></a>
+                <a href="login.html" class="nav-item nav-link active"><i class="fa fa-user"></i></a>
                 <a href="#" class="nav-item nav-link">
                     <div id="google_translate_element"></div>
                 </a>
@@ -82,11 +112,11 @@
             <div class="container py-5">
                 <div class="row justify-content-center">
                     <div class="col-lg-10 text-center">
-                        <h1 class="display-3 text-white animated slideInDown">Login</h1>
+                        <h1 class="display-3 text-white animated slideInDown">Admin Login</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
                                 <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
-                                <li class="breadcrumb-item text-white active" aria-current="page">Login</li>
+                                <li class="breadcrumb-item text-white active" aria-current="page">Admin Login</li>
                             </ol>
                         </nav>
                     </div>
@@ -105,7 +135,7 @@
                 <center>
                     <form class="shadow p-4" style="max-width: 550px;">
                         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                            <h1 class="mb-5 bg-white text-center px-3">Login</h1>
+                            <h1 class="mb-5 bg-white text-center px-3" style="color:#00008B;">Admin Login</h1>
             
                         </div>
                         <div class="row g-3">
@@ -123,16 +153,29 @@
                             </div>
 
                             <div class="col-12">
-                                <p><a href="#">Forgot password?</a></p>
+                                <p><a href="#" style="color: #ff0000;">Forgot password?</a></p>
                             </div>
                             
                             <div class="col-12">
-                                <button class="btn text-light w-100 py-3" type="submit">Login</button>
-                            </div>
+  
+  <button class="btn text-light w-100 py-3" style="background-color: #00008B; border-radius: 50px;" type="button" onclick="
+  var email = document.getElementById('email').value.trim();
+  var password = document.getElementById('password').value.trim();
+  if (email.includes('@') && password) {
+    window.location.href = 'index.html';
+  } else {
+    alert('Please enter a valid email and password.');
+  }
+">Login</button>
 
-                            <div class="col-12 text-center">
-                                <p>Don't have an account? <a class="text-decoration-none" href="signup.html">Signup</a></p>
-                            </div>
+
+
+
+
+</div>
+
+
+                            
                         </div>
                     </form>
                 </center>     
@@ -152,33 +195,48 @@
                     <h4 class="text-white mb-3">Quick Link</h4>
                     <p><a class="text-light" href="about.html">About Us</a></p>
                     <p><a class="text-light" href="contact.html">Contact Us</a></p>
-                    <p><a class="text-light" href="">Privacy Policy</a></p>
+                    <p><a class="text-light" href="internship.html">Internships</a></p>
                     <p><a class="text-light" href="">Terms & Condition</a></p>
                     <p><a class="text-light" href="">FAQs & Help</a></p>
                 </div>
-                <div class="col-lg-4 col-md-6">
+		<div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, Bangalore, Karnataka</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 8683045908</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>secretcoder@gmail.com</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Chennai, Tamil Nadu</p>
+                    
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>Techenclavecontact@gmail.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-social" href="" target="_blank" 
+   style="background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5); 
+          color: white; border: none;">
+  <i class="fab fa-instagram"></i>
+</a>
+                        <a class="btn btn-social rounded-circle" href="" target="_blank"
+   style="background-color: #0088cc; color: white; border: none; transition: 0.3s ease;">
+  <i class="fab fa-telegram-plane"></i>
+</a>
+                        <a class="btn btn-social rounded-circle" href="" target="_blank"
+   style="background-color: #FF0000; color: white; border: none; transition: 0.3s ease;">
+  <i class="fab fa-youtube"></i>
+</a>
+                        <a class="btn btn-social rounded-circle" href="https://www.linkedin.com/in/techenclave/" target="_blank"
+   style="background-color: #0077B5; color: white; border: none; transition: 0.3s ease;">
+  <i class="fab fa-linkedin-in"></i>
+</a>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <h4 class="text-white mb-3">Subscribe to our Newsletter</h4>
-                    <p>Subscribe now and join our growing community of learners committed to lifelong education! </p>
+                    <h4 class="text-white mb-3">Subscribe for daily updates! </h4>
+                    <p>Subscribe now to receive daily updates on new internships, courses, and opportunities—straight to your inbox!</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <form action="#">
                             <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="email"
-                                placeholder="Your email" required>
+                                placeholder="Enter your email" required>
                             <button type="submit"
-                                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"><a
-                                    href="mailto:keertidvcorai@gmail.com">Subscribe</a></button>
+  class="btn py-2 position-absolute top-0 end-0 mt-2 me-2"
+  style="background-color: #80DAEB; border: none;">
+  <a href="mailto:vinod999raj45@gmail.com" style="color: white; text-decoration: none;">Subscribe</a>
+</button>
                         </form>
                     </div>
                 </div>
@@ -188,7 +246,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="index.html">Secret Coder</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="index.html">Techenclave</a>, All Right Reserved.
 
                     </div>
                 </div>
