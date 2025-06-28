@@ -314,12 +314,21 @@ Enter your certificate ID to confirm participation and verify achievements from 
 
 	
 <script>
-  const certificateData = {
-    "TE/25/2425": "Abinanthan V",
-    "TE/25/2426": "Ajithnath Jain A",
-    "TE/25/2427": "Akilesh A"
-    // Add more like: "TE/25/2428": "Your Name"
-  };
+  let certificateData = {};
+
+  // Load certificate data from text/CSV file
+  fetch('certificates.txt')
+    .then(response => response.text())
+    .then(data => {
+      const lines = data.trim().split('\n');
+      lines.forEach(line => {
+        const [certNo, name] = line.split(',');
+        certificateData[certNo.trim()] = name.trim();
+      });
+    })
+    .catch(error => {
+      console.error("Error loading certificate data:", error);
+    });
 
   function verifyCertificate() {
     const input = document.getElementById("certificateInput").value.trim();
@@ -335,7 +344,6 @@ Enter your certificate ID to confirm participation and verify achievements from 
     }
 
     const name = certificateData[input];
-
     if (name) {
       resultDiv.innerHTML = `
         <div class="alert alert-success fade-slide mt-3">
@@ -350,6 +358,7 @@ Enter your certificate ID to confirm participation and verify achievements from 
     }
   }
 </script>
+
 
 
 </body>
