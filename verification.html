@@ -377,7 +377,7 @@ async function fetchCSVData() {
 async function verifyCertificate() {
   const input = document.getElementById("certificateInput").value.trim();
   const resultDiv = document.getElementById("resultMessage");
-  resultDiv.innerHTML = ""; // Clear previous output
+  resultDiv.innerHTML = `<div class="text-primary">🔄 Verifying...</div>`; // Clear previous output
 
   if (input === "") {
     resultDiv.innerHTML = `
